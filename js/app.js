@@ -2,8 +2,8 @@
 
 //var userName = 'Kevin';
 //console.log(userName);
-
-var amountOfSleep = prompt('Do I get more than 6 hours of sleep if I slept at 12am? Please only answer with yes or no').toLowerCase();
+// 1st question
+var amountOfSleep = prompt('Do I get more than 6 hours of sleep if I sleep at 12am? Please only answer with yes or no').toLowerCase();
 
 if(amountOfSleep === 'yes') {
   alert('Only on Sundays');
@@ -12,8 +12,8 @@ if(amountOfSleep === 'yes') {
 } else {
   alert('Just answer with a yes or no please');
 }
-
-var onlyOnSundays = prompt('On a Sunday, do I have time to make breakfast?').toLocaleLowerCase();
+// 2nd question
+var onlyOnSundays = prompt('On a Sunday, do I have time to make breakfast?').toLowerCase();
 
 if(onlyOnSundays === 'yes'){
   alert('I usually do make /breakfast/... around 11 o/clock');
@@ -23,3 +23,25 @@ if(onlyOnSundays === 'yes'){
 else{
   alert('just answer with a yes or no please');
 }
+// 3rd question
+var sundayFood = prompt('Do I eat a heavy meal during lunch time?').toLowerCase();
+if(sundayFood === 'yes') {
+  alert('My lunch usually includes sandwitches and salad');
+} else if(sundayFood === 'no') {
+  alert('I will starve myself to death...');
+} else{
+  alert('you know the drill yes or no answers please.');
+}
+// 4th question
+var favMeal = prompt('Do I like pizza more than I like hotdogs').toLowerCase();
+
+if(favMeal === 'yes') {
+  alert('You are right! Hotdogs do not fill me up');
+} else if(favMeal === 'no') {
+  alert('You are wrong! Hotdogs are not satisfying');
+} else {
+  alert('Please say yes or no.');
+}
+
+
+
