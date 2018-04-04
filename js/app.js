@@ -3,6 +3,9 @@
 //var userName = 'Kevin';
 //console.log(userName);
 // 1st question
+
+var myName = prompt('My name is Kevin, what is your name?');
+console.log('Hello' + myName + 'This game will introduce to you a couple of my sleeping habits');
 var amountOfSleep = prompt('Do I get more than 6 hours of sleep if I sleep at 12am? Please only answer with yes or no').toLowerCase();
 
 if(amountOfSleep === 'yes') {
@@ -42,6 +45,14 @@ if(favMeal === 'yes') {
 } else {
   alert('Please say yes or no.');
 }
+// 5th question
+var happyMeal = prompt('If I do not have time to make food, do I rely on Mcdonalds for a meal?').toLowerCase();
 
-
+if(happyMeal === 'yes') {
+  alert('Hell no, maybe hashbrowns but that is it.');
+} else if(happyMeal === 'no') {
+  alert('You are right! I do not really like McDonalds');
+} else {
+  alert('please answer with yes or no');
+}
 
