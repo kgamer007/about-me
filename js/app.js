@@ -11,6 +11,8 @@ askQuestionTwo();
 askQuestionThree();
 askQuestionFour();
 askQuestionFive();
+askQuestionSix();
+askQuestionSeven();
 
 // 1st question
 function askQuestionOne() {
@@ -87,24 +89,26 @@ function askQuestionFive() {
   }
 }
 
-// 6th question numeric input portion of guessing game. 
-var favNum = 7;
-var numberOfTries = 4; 
-var guessNum;
+// 6th question numeric input portion of guessing game.
+function askQuestionSix() {
+  var favNum = 7;
+  var numberOfTries = 4; 
+  var guessNum;
 
-while(numberOfTries > 0){
-  guessNum = parseInt(prompt('Can you guess my favorite number?'));
-  numberOfTries--;
-  if(favNum === guessNum){
-    rightCounter++;
-    alert('Correct!');
-    break;
-  } if(favNum > guessNum){
-    wrongCounter++;
-    alert('too low of guess, please try again!');
-  } if(favNum < guessNum){
-    wrongCounter++;
-    alert('too high of a guess, please try again');
+  while(numberOfTries > 0){
+    guessNum = parseInt(prompt('Can you guess my favorite number?'));
+    numberOfTries--;
+    if(favNum === guessNum){
+      rightCounter++;
+      alert('Correct!');
+      break;
+    } else if(favNum > guessNum){
+      wrongCounter++;
+      alert('too low of guess, please try again!');
+    } else {
+      wrongCounter++;
+      alert('too high of a guess, please try again');
+    }
   }
 }
 
