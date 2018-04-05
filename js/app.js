@@ -13,6 +13,7 @@ askQuestionFour();
 askQuestionFive();
 askQuestionSix();
 askQuestionSeven();
+reportResults();
 
 // 1st question
 function askQuestionOne() {
@@ -112,44 +113,45 @@ function askQuestionSix() {
   }
 }
 
-// 7th question 
-//making an array guess question. Not sure if this is placed here. 
-var favPlace = ['Spain', 'California', 'Japan', 'Mexico'];
+// 7th question
+function askQuestionSeven() {
+  //making an array guess question. Not sure if this is placed here. 
+  var favPlace = ['Spain', 'California', 'Japan', 'Mexico'];
 
-//create a for loop to prompt names of places and 
-//compare with fav places
-var correctGuess = false;
-for (var tries = 0; tries < 6; tries++) {
-  //prompt guess
-  var guessPlace = prompt('Can you guess my favorite place to go for vacation?').toLowerCase();
-  //check if guess is correct
-  //by looping through the favPlace array
-  for (var i = 0; i < favPlace.length; i++) {
-    //get current place
-    var place = favPlace[i].toLowercase();
-    //check if equals
-    if (place === guessPlace) {
-      correctGuess = true;
-      //break out of the for loop
+  //create a for loop to prompt names of places and
+  //compare with fav places
+  var correctGuess = false;
+  for (var tries = 0; tries < 6; tries++) {  //the guess loop
+    //prompt guess
+    var guessPlace = prompt('Can you guess my favorite place to go for vacation?').toLowerCase();
+    //check if guess is correct
+    //by looping through the favPlace array
+    for (var i = 0; i < favPlace.length; i++) {
+      //check if equals
+      if (favPlace[i].toLowercase() === guessPlace) {
+        correctGuess = true;
+        //break out of the for loop
+        break;
+      }
+    }
+    //check if the user correctly guessed the answer
+    if (correctGuess) {
+      rightCounter++;
+      alert('Correct, that ' + guessPlace + 'is one of my 4 favorite places!');
       break;
+    }
+    else {
+      wrongCounter++;
+      alert('Incorrect, try again!');
     }
   }
 }
-//check if the user correctly guessed the answer
-if (correctGuess) {
-  rightCounter++;
-  alert('Correct, that ' + guessPlace + 'is one of my 4 favorite places!');
-}
-else {
-  wrongCounter++;
-  alert('Incorrect, try again!');
-}
 
-
-if (rightCounter > wrongCounter) {
-  alert('Congrats! Thanks for taking the time to getting to know me, you got ' + rightCounter + '/7 questions correct');
-  console.log('congrats! Thanks for taking the time to getting to know me');
-} else {
-  alert('Totally fine. I only just met you. You got ' + rightCounter + '/7 right. Better luck next time.');
+function reportResults() {
+  if (rightCounter > wrongCounter) {
+    alert('Congrats! Thanks for taking the time to getting to know me, you got ' + rightCounter + '/7 questions correct');
+    console.log('congrats! Thanks for taking the time to getting to know me');
+  } else {
+    alert('Totally fine. I only just met you. You got ' + rightCounter + '/7 right. Better luck next time.');
+  }
 }
-
