@@ -49,7 +49,7 @@ function askTheFiveQuestions() {
     if (usersGuess === rightAnswer[q]) {
       rightCounter++;
       alert(response[0][q]);
-    } else if (usersGuess !== rightAnswer[q]) {
+    } else if (usersGuess === 'yes' || usersGuess === 'no') {
       wrongCounter++;
       alert(response[1][q]);
     } else {
